@@ -1,1 +1,201 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymPlayer Support</title>
+  <style>
+    @font-face {
+      font-family: "Airstrike";
+      src:
+        url("/gymplayer-legal/fonts/airstrike.ttf") format("truetype"),
+        url("../fonts/airstrike.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #0f1014;
+      --panel: rgba(20, 22, 29, 0.92);
+      --soft: rgba(255, 255, 255, 0.08);
+      --line: rgba(255, 255, 255, 0.1);
+      --text: #f8f3ed;
+      --muted: #cfc3b7;
+      --accent: #ff8d4f;
+      --accent-soft: #ffe0cf;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      background:
+        radial-gradient(circle at top right, rgba(255, 141, 79, 0.24), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 224, 207, 0.12), transparent 34%),
+        linear-gradient(160deg, #0f1014 0%, #141721 100%);
+      padding: 28px 18px 42px;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px 28px;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(18px);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.78rem;
+      color: var(--accent-soft);
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-family: "Airstrike", "Arial Black", sans-serif;
+      font-size: clamp(2.4rem, 7vw, 4.4rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 18px auto 0;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1.04rem;
+    }
+
+    .mail {
+      display: inline-block;
+      margin: 22px auto 0;
+      text-decoration: none;
+      color: #1f120c;
+      background: linear-gradient(135deg, #fff2e8 0%, #ffc49d 100%);
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 800;
+      box-shadow: 0 14px 34px rgba(255, 141, 79, 0.25);
+    }
+
+    .mail-wrap {
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .card {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.12rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a href="/gymplayer-legal/">Legal Home</a>
+      <a href="/gymplayer-legal/privacy/">Privacy Policy</a>
+      <a href="/gymplayer-legal/terms/">Terms of Service</a>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Public Support</p>
+      <h1>Support</h1>
+      <p class="lead">
+        For bug reports, subscription issues, feature questions, or general help with GymPlayer,
+        contact the support email below.
+      </p>
+
+      <div class="mail-wrap">
+        <a class="mail" href="mailto:GymPlayerSupport@gmail.com">GymPlayerSupport@gmail.com</a>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h2>For Bug Reports</h2>
+          <ul>
+            <li>Your iPhone model</li>
+            <li>Your iOS version</li>
+            <li>What you were doing before the issue happened</li>
+            <li>Screenshots if you have them</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>For Subscription Help</h2>
+          <p>If your issue relates to GymPlayer Pro, include the device and Apple ID account situation clearly. Billing and refunds are handled by Apple.</p>
+        </article>
+
+        <article class="card">
+          <h2>Response Scope</h2>
+          <p>This page is the public support contact for the App Store listing. It is intended for user help, basic troubleshooting, and legal contact routing.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+
