@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymPlayer Legal</title>
     <style>
+      @font-face {
+        font-family: "Airstrike";
+        src: url("./fonts/airstrike.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
       body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -15,7 +22,9 @@
         justify-content: center;
         min-height: 100vh;
         padding: 24px;
+        text-align: center;
       }
+
       .card {
         max-width: 720px;
         width: 100%;
@@ -25,20 +34,30 @@
         padding: 32px;
         box-sizing: border-box;
       }
+
       h1 {
         margin-top: 0;
+        margin-bottom: 16px;
         font-size: 32px;
+        font-family: "Airstrike", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 1px;
       }
+
       p {
         color: #c8c8d0;
         line-height: 1.6;
+        margin: 0 auto;
+        max-width: 560px;
       }
+
       .links {
         margin-top: 24px;
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
+        justify-content: center;
       }
+
       a {
         text-decoration: none;
         color: #0b0b0f;
