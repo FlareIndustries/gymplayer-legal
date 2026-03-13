@@ -1,83 +1,209 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GymPlayer Legal</title>
-    <style>
-      @font-face {
-        font-family: "Airstrike";
-        src: url("./fonts/airstrike.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-      }
 
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #0b0b0f;
-        color: #f5f5f5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 24px;
-        text-align: center;
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymPlayer Legal</title>
+  <style>
+    @font-face {
+      font-family: "Airstrike";
+      src:
+        url("/gymplayer-legal/fonts/airstrike.ttf") format("truetype"),
+        url("./fonts/airstrike.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
 
-      .card {
-        max-width: 720px;
-        width: 100%;
-        background: #15151d;
-        border: 1px solid #2a2a36;
-        border-radius: 18px;
-        padding: 32px;
-        box-sizing: border-box;
-      }
+    :root {
+      --bg: #0d0d11;
+      --panel: rgba(23, 24, 31, 0.88);
+      --panel-soft: rgba(255, 255, 255, 0.07);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f7f2ea;
+      --muted: #cbbfb0;
+      --accent: #ff8a47;
+      --accent-soft: #ffd8c1;
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+    }
 
-      h1 {
-        margin-top: 0;
-        margin-bottom: 16px;
-        font-size: 32px;
-        font-family: "Airstrike", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        letter-spacing: 1px;
-      }
+    * {
+      box-sizing: border-box;
+    }
 
-      p {
-        color: #c8c8d0;
-        line-height: 1.6;
-        margin: 0 auto;
-        max-width: 560px;
-      }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      background:
+        radial-gradient(circle at top, rgba(255, 138, 71, 0.22), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(255, 216, 193, 0.10), transparent 28%),
+        linear-gradient(160deg, #0d0d11 0%, #111218 45%, #171821 100%);
+      padding: 28px 18px 42px;
+    }
 
-      .links {
-        margin-top: 24px;
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
 
-      a {
-        text-decoration: none;
-        color: #0b0b0f;
-        background: #ffffff;
-        padding: 12px 16px;
-        border-radius: 12px;
-        font-weight: 600;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <h1>GymPlayer Legal</h1>
-      <p>
-        This site contains the public legal documents for GymPlayer.
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -40% 45%;
+      height: 260px;
+      background: radial-gradient(circle, rgba(255, 138, 71, 0.28), transparent 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.78rem;
+      color: var(--accent-soft);
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-family: "Airstrike", "Arial Black", sans-serif;
+      font-size: clamp(2.8rem, 8vw, 5.4rem);
+      letter-spacing: 0.08em;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .sub {
+      max-width: 720px;
+      margin: 18px auto 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .cta {
+      text-decoration: none;
+      color: #20140e;
+      background: linear-gradient(135deg, #fff4eb 0%, #ffcaa7 100%);
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      box-shadow: 0 10px 28px rgba(255, 138, 71, 0.22);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .card a {
+      color: var(--text);
+      text-decoration: none;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+    }
+
+    .foot {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .foot a {
+      color: var(--accent-soft);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Official Legal Pages</p>
+      <h1>GymPlayer</h1>
+      <p class="sub">
+        Public legal pages for GymPlayer, including the Privacy Policy, Terms of Service,
+        and support contact details.
       </p>
-      <div class="links">
-        <a href="/gymplayer-legal/privacy/">Privacy Policy</a>
-        <a href="/gymplayer-legal/terms/">Terms of Service</a>
+
+      <div class="cta-row">
+        <a class="cta" href="/gymplayer-legal/privacy/">Privacy Policy</a>
+        <a class="cta" href="/gymplayer-legal/terms/">Terms of Service</a>
+        <a class="cta" href="/gymplayer-legal/support/">Support</a>
       </div>
-    </div>
-  </body>
-  </html>
+
+      <div class="grid">
+        <article class="card">
+          <h2>Privacy</h2>
+          <p>How GymPlayer handles imported media, Tether sessions, metadata lookups, local storage, and subscriptions.</p>
+          <a href="/gymplayer-legal/privacy/">Read Privacy Policy</a>
+        </article>
+
+        <article class="card">
+          <h2>Terms</h2>
+          <p>The usage rules for GymPlayer, including subscriptions, content responsibility, and prohibited use.</p>
+          <a href="/gymplayer-legal/terms/">Read Terms of Service</a>
+        </article>
+
+        <article class="card">
+          <h2>Support</h2>
+          <p>Need help with bugs, subscriptions, or anything else? This is the public support page for the app.</p>
+          <a href="/gymplayer-legal/support/">Open Support</a>
+        </article>
+      </div>
+
+      <p class="foot">
+        Support contact:
+        <a href="mailto:GymPlayerSupport@gmail.com">GymPlayerSupport@gmail.com</a>
+      </p>
+    </section>
+  </div>
+</body>
+</html>
